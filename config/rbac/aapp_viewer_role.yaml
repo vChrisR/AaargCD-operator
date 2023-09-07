@@ -1,0 +1,27 @@
+# permissions for end users to view aapps.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: aapp-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: aaargcd-operator
+    app.kubernetes.io/part-of: aaargcd-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: aapp-viewer-role
+rules:
+- apiGroups:
+  - aaargcd.io
+  resources:
+  - aapps
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - aaargcd.io
+  resources:
+  - aapps/status
+  verbs:
+  - get

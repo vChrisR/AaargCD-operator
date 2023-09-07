@@ -1,0 +1,12 @@
+apiVersion: aaargcd.io/v1alpha1
+kind: Aapp
+metadata:
+  labels:
+    app.kubernetes.io/name: aapp
+    app.kubernetes.io/instance: aapp-sample
+    app.kubernetes.io/part-of: aaargcd-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: aaargcd-operator
+  name: aapp-sample
+spec:
+  # TODO(user): Add fields here

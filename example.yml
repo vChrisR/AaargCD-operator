@@ -1,0 +1,7 @@
+apiVersion: aaargcd.io/v1alpha1
+kind: Aapp
+metadata:
+  name: aaargdemo
+spec:
+  repo: https://github.com/argoproj/argocd-example-apps.git
+  folder: guestbook
