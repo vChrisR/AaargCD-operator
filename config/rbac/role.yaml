@@ -34,19 +34,7 @@ rules:
 - apiGroups:
   - batch
   resources:
-  - CronJobs
-  verbs:
-  - create
-  - delete
-  - get
-  - list
-  - patch
-  - update
-  - watch
-- apiGroups:
-  - ""
-  resources:
-  - ServiceAccounts
+  - cronjobs
   verbs:
   - create
   - delete
@@ -63,9 +51,21 @@ rules:
   - create
   - patch
 - apiGroups:
+  - ""
+  resources:
+  - serviceaccounts
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
   - rbac.authorization.k8s.io
   resources:
-  - RoleBindings
+  - rolebindings
   verbs:
   - create
   - delete
